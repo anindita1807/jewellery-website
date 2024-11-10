@@ -1,0 +1,75 @@
+/* Home Section Background */
+.bg-hero {
+  background-image: url('../assets/home-page.jpg'); /* Correct path for your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Dark overlay for background */
+.bg-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+  z-index: 1; /* Ensure the overlay stays behind content */
+}
+
+/* Ensures content sits above the overlay */
+.bg-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling for FaStar */
+.star-icon {
+  color: #ffcd3c; /* Gold color for stars */
+  font-size: 2rem; /* Adjust size of stars */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for stars */
+.star-icon:hover {
+  color: #f0a500; /* Slightly darker gold on hover */
+}
+
+/* Flexbox and container styles */
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text-secondaryWhite {
+  color: #f8f8f8; /* White text for visibility */
+}
+
+/* Additional text styling */
+.bold-16, .regular-16 {
+  color: #f8f8f8;
+}
+
+.bold-16 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.regular-16 {
+  font-size: 1rem;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Smaller font size on mobile */
+  }
+}

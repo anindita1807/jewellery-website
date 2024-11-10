@@ -5,11 +5,12 @@ import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
+import Logout from "./pages/Logout";
 import Cart from "./pages/Cart"; // Import Cart component
-import bannerrings from "./assets/bannerrings.png"
-import bannerearrings from "./assets/bannerearrings.png"
-import bannerbangles from "./assets/bannerbangles.png"
-import bannernecklace from "./assets/bannernecklace.png"
+import bannerrings from "./assets/bannerrings.jpg"
+import bannerearrings from "./assets/bannerearrings.jpg"
+import bannerbangles from "./assets/bannerbangles.jpg"
+import bannernecklace from "./assets/bannernecklace.jpg"
 
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
           </Route>
           <Route path="/cart-page" element={<Cart />} />  {/* Unique path for Cart */}
           <Route path="/login" element={<Login />} />  {/* Unique path for Login */}
+          <Route path="/logout" element={<Logout />} /> 
         </Routes>
 
       </BrowserRouter>
